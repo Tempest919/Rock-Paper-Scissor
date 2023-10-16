@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="randomizer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <aside>
+        <p style="font-size:30px">How to play:<br>
+            1. Press 30 sec or 60 sec to start the game <br>
+            2. Select Rock, Paper, or Scissor <br>
+            3. Whoever has more score at the end of timer wins <br>
+        </p>
+    </aside>
+    <h1>
+        <h>Result</h><br>
+        <input class="winloseresult" id="result" disabled /><br> <!--Display "Result"-->
+    </h1>
+    <table style="width:70%">
+        <h1>
+            <tr>
+                <th>Player Score</th>
+                <th>Timer</th>
+                <th>Computer Score</th>
+            </tr>
+        </h1>
+        <h2>
+            <tr>
+                <th><input class="display" id="playerscore" style="width:20%" disabled /></th>
+                <th><input class="display" id="timerdisplay" disabled /></th>
+                <!-- <p id="michael" style="width:200px; height: 200px; background-color: red;" onclick="Timerfunction(5)"></p> -->
+                <th><input class="display" id="computerscore" style="width:20%" disabled /></th>
+            </tr>
+        </h2>
+    </table>
+    <h3>
+        <tr>
+            <th><input class="display" id="playerselected" style="margin-left:300px; width:10%" disabled /></th>
+            <th></th>
+            <th><input class="display" id="computerselected" style="margin-left:150px; width:10%" disabled /></th>
+        </tr>
+    </h3>
+    <h4>
+        <p style="margin-left:220px">
+            <input type="button" disabled value="ROCK" id="rock" style="font-size:25px" onclick="RPSfunction('ROCK')"><img
+                src="RPSROCK.png" style="width:30px;height:30px;">
+            <!-- use <img src="rockRPS.jpg" to view rock selection as image> -->
+            <!-- use <p title="Rock">__</p> to add extra info on what the image is-->
+            <input type="button" disabled value="PAPER" id="paper" style="font-size:25px" onclick="RPSfunction('PAPER')"><img
+                src="RPSPAPER.png" style="width:30px;height:30px;"></th>
+            <!-- use <img src="paperRPS.jpg" to view paper selection as image> -->
+            <!-- use <p title="Paper">__</p> to add extra info on what the image is-->
+            <input type="button" disabled value="SCISSOR" id="scissor" style="font-size:25px" onclick="RPSfunction('SCISSOR')"><img
+                src="RPSSCISSOR.png" style="width:30px;height:30px;"></th>
+            <!-- use <img src="scissorsRPS.jpg" to view scissor selection as image> -->
+            <!-- use <p title="Scissor">__</p> to add extra info on what the image is-->
+        </p>
+    </h4>
+    <h5>
+        <tr>
+            <th><input type="button" value="30 Seconds" id="30sec" style="font-size:25px; margin-left:220px"
+                    onclick="Timerfunction('30')"></th>
+            <th><input type="button" value="60 Seconds" id="60sec" style="font-size:25px; margin-left:100px"
+                    onclick="Timerfunction('60')"></th>
+        </tr>
+    </h5>
+    <script src="randomizer.js"></script>
+</body>
+
+</html>
